@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Page Title-->
+  <title>Asphalt</title>
+  <link rel="splat icon" href="splay.png">
+  <meta charset="UTF-8">
+
+  <!--Setting up width for mobile browsers-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS included in HTML for simplicity -->
+  <!-- Link to style CSS -->
+  <!-- <link rel="stylesheet" href="geolstyle.css"/> -->
+  <style>
+    * {
+  background-color: rgb(197, 190, 190);
+  margin: 0;
+  box-sizing: border-box;
+  color: darkblue;
+}
+
+
+/*********************Links appearance*********************/
+a {
+  color: orangered;
+  text-decoration: none;
+  text-decoration: underline;
+}
+/*************************FINISHED*************************/
+
+/***********Change default bullets color in list***********/
+ul {
+  list-style: none; /*Remove default style*/
+}
+
+li:before {
+  content: "\2022"; /* \2022 is the CSS code for a bullet*/
+  color: darkblue;
+  font-weight: bold;
+  /* Following 3 lines are needed for space */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+/*************************FINISHED*************************/
+
+
+.title {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif, cursive, serif;
+  color: darkblue;
+  overflow: hidden;
+  font-size: xx-large;
+  padding: 0px;
+}
+
+/***********TOP TAB STYLE************/
+.tab {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: orangered;
+  display: table;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid rgba(0,0,0,0.3);
+  border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+/* Buttons style */
+.tab button {
+  background-color: darkblue;
+  float: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: 0.3s;
+  color: rgb(235, 235, 235);
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+}
+
+/* Buttons on hoover */
+.tab button:hover {
+  background-color: blue;
+}
+
+.code {
+  margin-left: 50px;
+  color: #6666ff;
+}
+.offset {
+  margin-left: 50px;
+}
+.inscode {
+  color: #6666ff;
+}
+
+/* Create active/current tablink class */
+.tab button.active {
+  background-color: blue;
+}
+
+/* Tab style */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  color: grey;
+}
+
+/* Fade tab content */
+.tabcontent {
+  animation: fadeEffect 1s; /*Fade effect takes 1 second */
+}
+
+/*Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+table {
+  border: 2px solid grey;
+  margin-left: 50px;
+}
+th {
+  border: 1px solid grey;
+  text-align: center;
+}
+td {
+  border: 1px solid grey;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <!--Title-->
+  <div class="title">
+    <p>Sustainability analysis</p>
+    <p><H6>Asphalt life cycle</H6></p>
+  </div>
+
+<!-- TOP TAB -->
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event,'Intro')" style="float:left" id="defaultOpen">Introduction</button> <!--Default tab-->
+  <button class="tablinks" onclick="openTab(event,'Uses')" style="float:left">Uses</button>
+  <button class="tablinks" onclick="openTab(event,'Technologies')" style="float:left">Technologies</button>
+  <button class="tablinks" onclick="openTab(event,'Waste')" style="float:left">Waste</button>
+  <button class="tablinks" onclick="openTab(event,'Recycling')" style="float:left">Recycling</button>
+  <button class="tablinks" onclick="openTab(event,'Future')" style="float:left">Future</button>
+  <button class="tablinks" onclick="openTab(event,'About')" style="float:right">About</button>
+</div>
+
+<!-- Tab content -->
+<div id="Intro" class="tabcontent">
+  </br>
+<h3 align="center"><u>Exploring the sustainability in asphalt life cycle</u></h3>
+</br>
+<p>While often overlooked when discussing construction materials, asphalt is one of the fundamental and most widely used materials in construction industry today and will most likely remain so, at least until flying cars become the norm (even then there will still be cyclists).</p>
+</br>
+<p>With that in mind, it is important to explore the effect of this material on the world we live in, and how current practices within the industry will impact the future generations.</p>
+<p>In this short brief we will try to do so following the life cycle of the material.</p>
+</br>
+<p>The life cycle of asphalt was examined through following sections:</p>
+<ul>
+  <li>Uses for asphalt as a raw material</li>
+  <li>Technologies used in asphalt production</li>
+  <li>Waste and pollution associated with asphalt</li>
+  <li>Asphalt recycling</li>
+  <li>Developing technologies</li>
+</ul>
+</br>
+<p>The scope of this project is best depicted on a roadmap that serves as a graphic guide.</p>
+</br>
+</br>
+<img src="roadmap.jpg" alt="Roadmap" style="max-width: 100%; height: auto;">
+</br>
+</br>
+<p>Before getting into specifics, it might be a good idea to examine what actually constitutes asphalt as a material.</p>
+</br>
+<img src="asphalt.jpg" alt="Asphalt">
+</br>
+</br>
+<p>Asphalt is a mixture of aggregates, binder and filler.</br>Different mixes of these components are used depending on the Asphalt required for each job.</br>In order to bind the aggregates together into a cohesive mixture a binder is required, most commonly Bitumen is used for this purpose, although a series of bio-based binders are also under development with the aim of minimising the environmental impact.</p>
+<p>You may still hear people referring to Tarmac and tarring a road. In Ireland tar has not been used in road construction since the 1990’s. Tar is totally different from bitumen. They are both black, but tar comes from coal and bitumen from heavy crude oil.</p>
+<p>There are many different Types of Asphalt, some of the more used mixes in construction are:</p>
+<ul>
+  <li>HRA – Hot Rolled Asphalt is a predominantly a sand based mix. In approximately 30 to 35 percent of its uses, pre-coated chippings are applied to its surface onsite by a chipping machine (chipper) and rolled into the hot mix. This provides surface texture for zones where vehicles will be breaking, for example at roundabouts. </li>
+  <li>SMA - Stone Mastic Asphalt is mainly used in road construction as it has high strength, durability and is resistant to deformations</li>
+  <li>WMA - Warm Mix Asphalt is a bituminous mixture that embracing technology that allows the material to be manufactured at lower production temperatures. This reduces the amount of fuel required to dry and heat the aggregates in the bituminous material, resulting in lower energy consumption and lower CO2 emissions. Incorporating this technology means that the performance characteristics of the Warm Mix Asphalt are the equivalent of a HRA despite being produced at a lower temperature. Warm Mix Asphalt is a “greener” more environmentally sustainable option.</li>
+</ul>
+<p>Europe has over 2500 asphalt production sites and over 9500 companies are involved in asphalt production and/or laying.</p>
+</br>
+</br>
+<p>List of references:</p>
+<ul>
+  <li><a href="https://www.siac.ie/bituminous-products/" target="_blank">Siac</a></li>
+  <li><a href="https://www.roadstone.ie/products/?jet-smart-filters=epro-products" target="_blank">Roadstone</a></li>
+  <li><a href="https://www.youtube.com/watch?v=acbAthiKrnI" target="_blank">Martins Zaumanis</a> - How green asphalt roads will save you tax money</li>
+  <li><a href="https://www.tiipublications.ie/" target="_blank">Transport Infrastructure Ireland</a></li>
+  <li><a href="https://www.kilsaran.ie/products/roadsurfacing-and-contracting/asphalt-products/" target="_blank">Kilsaran</a></li>
+</ul>
+</br>
+</br>
+</br>
+</br>
+</br>
+</div>
+
+<div id="Uses" class="tabcontent">
+  <br />
+	<h3 align="center"><u>Uses for Asphalt as a raw material</u></h3>
+  <br />
+  <img src="road.jpg" alt="Road construction" style="float: right; margin: 20px;" width="250px" height="auto"> 
+  <p><u>Road construction:</u></p>
+  <ul>
+    <li>85% of asphalt used in the world is used for road construction</li>
+    <li>Asphalt concrete commonly known as macadam is a dense, medium or open graded blend of mineral aggregate, cushed rock and bitumen that complies with EN13108 and the TII specification for road works</li>
+    <li>Hot rolled asphalt (HRA) is a dense mixture of mineral aggregate, sand, filler and bitumen that complies with EN13108 and the TII specification for road works</li>
+    <li>Stone mastic asphalt (SMA) is a gap graded mix which is commonly manufactured using a polymer modified binder for extra strength. SMA is usually used in new road construction or overlaying existing roads</li>
+    <li>More info on this topic can be found on <a href="https://www.roadstone.ie/" target="_blank">Roadstone</a> web page</li>
+  </ul>
+  </br>
+  </br>
+  <img src="runway.jpg" alt="Runway" style="float: right; margin: 20px;" width="250px" height="auto"> 
+  <p><u>Runway construction:</u></p>
+  <ul>
+    <li>Marshall asphalt is a well graded material designed in accordance with the airport authority specification, which is designed to be higly durable</li>
+    <li>Marshall asphalt is used in the construction of airport runways and taxiways.</li>
+    <li>The key benefits of marshal asphalt include:</li>
+    <ul>
+      <li>High deformation resistance</li>
+      <li>Good load bearing ability</li>
+      <li>High resistance to moisture damage and a impermeable surface</li>
+      <li>Good rutting resistance</li>
+    </ul>
+    <li>Again, main source for this parahraph was <a href="https://www.roadstone.ie/" target="_blank">Roadstone</a> web page</li>
+  </ul>
+  </br>
+  </br>
+  <img src="playground.jpg" alt="Playground" style="float: right; margin: 20px;" width="250px" height="auto"> 
+  <p><u>Less common uses:</u></p>
+  <ul>
+    <li>Playgrounds – Utiplay Porous is a dense, low textured asphalt specifically designed to provide a safe but durable surface in playgrounds and skate parks</li>
+    <li>For more info on Utiplay Porous material please see <a href="https://tarmac.com/products/asphalt/ultiplay-porous/" target="_blank">Tarmac's</a> web page.</li>
+    <li>Roofing systems – roofing grade mastic asphalt is typically laid in two coats of 10mm each, this is a great material for covering flat roofs and has a long proven history of waterproofing properties</li>
+    <li>For more info on roofing systems please see <a href="https://www.iko.ie/iko-specification/flat-roofing/mastic-asphalt/mastic-asphalt-roofing-accessories/mastic-asphalt-systems/mastic-asphalt-roofing-systems/" target="_blank">IKO.ie</a> web page.</li>
+    <li>Asphalt paints – asphalt is also used in speciallst paints due to it’s waterpoof, adhesive  and anti-corrosion properties. These paints can be used on steel, iron, conrete, masonry and wood</li>
+  </ul>
+</br>
+</br>
+</br>
+</br>
+</br>
+</div>
+
+<div id="Technologies" class="tabcontent">
+  <br />
+	<h3 align="center"><u>Technologies used in asphalt production</u></h3>
+  <br />
+  <p>Most manufacturers of asphalt mixing plants prioritise recycling capability in their equipment. Recycled asphalt pavement (RAP) content in new asphalt production varies greatly between plants, with the more basic plants expected to utilise as little as 15% RAP and the larger, more technologically advanced plants with the capacity to use 100% RAP.</p>
+</br>
+</br>
+  <img src="emak.jpg" alt="E-MAK Megaton" style="float: right; margin: 20px;" width="150" height="auto"> 
+  <p>E-Mak Megaton is a cold mix asphalt / aggregate plant that features:</p>
+  <ul>
+    <li>Filtration system reduces dust</li>
+    <li>In-built aggregate recycling system</li>
+    <li>Moisture control</li>
+    <li>Reduces energy consumption</li>
+    <li>Operational capacity of 450 tons per hour</li>
+    <li>More info on <a href="https://e-mak.com/en/products/aggregate-plants/megaton" target="_blank">E-MAK</a> web page</li>
+  </ul>
+</br>
+</br>
+</br>
+  <img src="marini.jpg" alt="Marini" style="float: right; margin: 20px;" width="150" height="auto"> 
+  <p>Marini Master Tower is a hot mix asphalt plant whose main characteristics are:</p>
+  <ul>
+    <li>Uses a specially designed drum system at 160°C</li>
+    <li>RAP is heated by the gases from the drum</li>
+    <li>No direct contact with heat source</li>
+    <li>Emissions reduced</li>
+    <li>Allows for use of 100% RAP</li>
+    <li>More info on Marini web page <a href="https://marini.fayat.com/en/technology/recycling" target="_blank">here</a> and <a href="https://marini.fayat.com/en/products/batch-plants/master-tower " target="_blank">here</a>.</li>
+  </ul>
+</br>
+</br>
+</br>
+  <img src="amman.jpg" alt="Amman Shredder" style="float: right; margin: 20px;" width="150px" height="auto"> 
+  <p>Amman RSS 120-M Shredder is a RAP processor whose main characteristics are:</p>
+  <ul>
+    <li>Can recycle both milled materials and large chunks/ slabs</li>
+    <li>Reduces dust emissions</li>
+    <li>Fuel efficient</li>
+    <li>Electrically – powered motor</li>
+    <li>Minimum capacity of 80 tons per hour</li>
+    <li>More info on <a href="https://www.ammann.com/en/plants/asphalt-plants/complementary-products/rss-120-m" target="_blank">Amman</a> web page.</li>
+  </ul>
+</br>
+</br>
+</br>
+  <img src="benninghoven.jpg" alt="Benninghoven" style="float: right; margin: 20px;" width="180px" height="auto"> 
+  <p>Benninghoven recycling parallel drum is a add-on plant equipment that features:</p>
+  <ul>
+    <li>Gas expansion chamber reduces air speed</li>
+    <li>Counter-flow heating system</li>
+    <li>Lower exhaust temperature</li>
+    <li>Reduces energy consumption</li>
+    <li>Reduces emissions</li>
+    <li>For additional info see <a href="https://www.worldhighways.com/wh6/feature/rap-drum-benninghovens-system-counter-flow-rap-solution-future " target="_blank">World Highways</a> web page and <a href="https://www.wirtgen-group.com/en-ee/news-and-media/benninghoven/recycling-parallel-drum-hot-gas-generator/" target="_blank">Wirtgen Group</a> web page.</li>
+  </ul>
+</br>
+</br>
+</br>
+  <p> Additional references:</p>
+  <ul>
+    <li><a href="https://www.worldhighways.com/wh6/feature/asphalt-plant-innovations" target="_blank">World Highways</a></li>
+    <li><a href="https://www.roadsbridges.com/how-technological-innovations-are-disrupting-asphalt-mixing-plants-demand" target="_blank">Roads & Bridges</a></li>
+  </ul>
+</br>
+</br>
+</br>
+</br>
+</br>
+</div>
+
+<div id="Waste" class="tabcontent">
+  <br />
+	<h3 align="center"><u>Waste and pollution associated with asphalt</u></h3>
+</br>
+<img src="smoke.jpeg" alt="Emmisions" style="float: right; margin: 20px;" width="180px" height="auto"> 
+  <p>As a petroleum based product asphalt is a highly volatile organic compound substance and during its production, just like during any other crude oil refinement process, certain amount of harmful gasses are released. The exact amount of those emissions vary from source to source but among most commonly mentioned are carbon monoxide, nitrogen oxides, sulfur and benzene.</p>
+  <p>By using modern technology most of those emissions can be more or less effectively contained, and of course that aspect of industry is being continuously improved.</p>
+  <p>According to study conducted at Yale University in 2020, asphalt emissions increase significantly when subjected to temperatures above 40 degrees celsius. which is actually a normal temperature for asphalt roads during summer months in southern europe, southern United States and similar climates. So according to that study even when just sitting in the sun asphalt is actually a pollutant.</p>
+  <p>Full article on that can be found <a href="https://www.newscientist.com/article/2253470-asphalt-on-roads-may-soon-be-greater-source-of-air-pollution-than-cars/" target="_blank">here</a></p>
+</br>
+</br>
+</br>
+  <img src="waste.jpeg" alt="Waste" style="float: right; margin: 20px;" width="180px" height="auto">
+  <p>The best practice in pavement industry lies in recyling.</p>
+  <p>In total about 100 million metric tonnes of bitumen is used every year worldwide, about 85% of that is used for paving, 10% for roofing and 5% on other uses.</p>
+  <p>With that figures in mind its interesting to see the Irish Environmental Protection Agency report for 2018 where bituminous mixes account for only 1% of out of Ireland 6.2 million tonnes of construction and demolition waste</p>
+  <p>Link to full report <a href="https://www.epa.ie/nationalwastestatistics/constructiondemolition/" target="_blank">here</a></p>
+</div>
+
+<div id="Recycling" class="tabcontent">
+  <br />
+	<h3 align="center"><u>Recycling into the future</u></h3>
+</br>
+  <p><u>Asphalt roof shingles</u></p>
+  <p>In the U.S. approximately 13 million tons of aspahlt roof shingles are removed from old roofs each year, at current recycling rates only about 10% of that figure gets recycled each year into paving and roads.</p>
+  <p>New technologies are developing this year that is projected to see upwards of 90% of old asphalt roof shingles being recycled and reused back into brand new shingles.</p>
+  <p>These new technologies are also being explored through a developing grinding process to be used on all asphalt products with the goal of creating a circular economy for asphalt in general.</p>
+  <p>GAF is committing more than $100 million in research and to bring this process to a commercial scale</p>
+  <p><a href="https://www.gaf.com/en-us/blog/welcome-to-the-future-of-asphalt-recycling-281474980090173" target="_blank">Reference</a></p>
+</br>
+</br>  
+  <img src="shingles.jpg" alt="Info" style="max-width: 50%; height: auto;">
+</br>
+</br>
+  <p><u>Asphalt recycling in roads</u></p>
+  <p>Trials have been conducted mixing recycled asphalt material with used vehicle tyres in recent years, using the process that are currently being developed it might be possible to make self-repairing roads in the future</p>
+  <p><a href="https://www.newcivilengineer.com/the-future-of/future-of-roads-recycled-asphalt-leads-to-cleaner-resurfacing-07-07-2020/" target="_blank">Reference</a></p>
+</br>
+</br>
+</br>
+</br>
+</br>
+</div>
+
+<div id="Future" class="tabcontent">
+  <br />
+	<h3 align="center"><u>Developing technologies for sustainable future</u></h3>
+</br>
+  <img src="tech1.png" alt="t1" style="float: right; margin: 20px;" width="150px" height="auto">
+  <p><u>Warm Mix Asphalt technology as an alternative to Hot Mix Asphalt:</u></p>
+  <ul>
+    <li>Lower production temperature and less harmful emissions and energy consumption</li>
+    <li>Equals or betters the performance of HMA in terms of moisture damage resistance, adhesion and resistance to cracking</li>
+    <li>Achieved through foaming, organic additives and chemical additives</li>
+    <li>Foaming is the most popular technique, accounting for 77% of WMA usage in the United States between 2009 and 2011</li>
+    <li>Introduction of water into hot binder during production, generates bubbles, provides low viscosity and increases its volume</li>
+    <li>Apply high temperatures at the desired water content in order to optimise the workability of the binder</li>
+    <li>The organic additive technique is the poorest long-term performer of the three in terms of resistance to cracking</li>
+    <li>Environmental footprint significantly lesser than HMA</li>
+  </ul>
+</br>
+</br>
+</br>
+  <img src="tech2.jpg" alt="T2" style="float: right; margin: 20px;" width="150px" height="auto">
+  <p><u>Warm Mix Rubberised Asphalt Concrete (a marriage of two techniques):</u></p>
+  <ul>
+    <li>Utilising crumb rubber chippings from scrap tyres (benefit – recycling, drawback – environmental toll due to waste production and air quality from processing)</li>
+    <li>In wet weather, the run-off from the pavement may introduce harmful chemicals from the rubber into local watercourses.</li>
+    <li>Most of the drawbacks can be equalised by variations in the binder and aggregate content</li>
+    <li>WMRAC is itself entirely recyclable</li>
+    <li>Rivals the performance of HMA</li>
+    <li>Reduces the overall production of greenhouse gases and energy wastage</li>
+    <li>Aids the environment by preventing waste tyres from being burned or landfilled</li>
+  </ul>
+</br>
+</br>
+</br>
+  <img src="tech3.jpg" alt="T3" style="float: right; margin: 20px;" width="150px" height="auto">
+  <p><u>Asphalt rejuvenation using waste cooking oil (WCO)</u></p>
+  <ul>
+    <li>Sustainable solution to the growing problem of waste oil management</li>
+    <li>A rejuvenator is a recycling agent which improves the overall properties of aged asphalt by recovering the penetration value and softening point </li>
+    <li>This will bring the quality in line with standard bitumen, rather than restoring the precise structure of the original binder</li>
+    <li>WCO shares some common components with bitumen</li>
+    <li>Add the WCO directly into the binder, ideally after it has been filtered/purified (sometimes after being chemically treated)</li>
+    <li>Improves thermal crack resistance and fatigue resistance</li>
+  </ul>      
+</br>
+</br>
+</br>
+  <img src="tech4.jpg" alt="T4" style="float: right; margin: 20px;" width="150px" height="200%">
+  <p><u>Ground Granulated Blast-furnace Slag (GGBS) in asphalt</u></p>
+  <ul>
+    <li>Commonly used in place of Portland cement in concrete production</li>
+    <li>Is a by-product of iron and steel manufacturing</li>
+    <li>Recycling waste materials</li>
+    <li>Laboratory test results showed an improvement in rut resistance, water sensitivity and compressive strength ratio</li>
+    <li>The addition of GGBS allows for a reduction in the amount of asphalt mix used, thereby saving money</li>
+  </ul>
+</br>
+</br>
+</br>
+  <img src="tech5.jpg" alt="T5" style="float: right; margin: 20px;" width="150px" height="auto">
+  <p><u>Organic Solution – Bio-oil derived from microalgae</u></p>
+  <ul>
+    <li>Microalgae can be converted into crude oil, which is a suitable base material for binder</li>
+    <li>The energy value from this bio-oil matches that of fossil fuels</li>
+    <li>A biological solution – making use of natural resources, reducing harmful emissions </li>
+    <li>Microalgae is already used for wastewater treatment and can be reused to produce asphalt, thereby promoting a circular economy</li>
+  </ul>
+</br>
+</br>
+</br>
+  <p><u>List of references:</u></p>
+  <ul>
+    <li><a href="https://www.engineersireland.ie/Engineers-Journal/News/ggbs-improves-rut-resistance-and-water-sensitivity-in-asphalt-mixes" target="_blank">Kavanagh, Lohan, & Salih, 2014</a></li>
+    <li><a href="https://bcfocus.com/global-ground-granulated-blast-furnace-slag-market-2020-expected-development-share-demand-and-study-of-key-players-research-predictions-2025/" target="_blank">BCFocus, 2020</a></li>
+    <li><a href="https://www.mdpi.com/2076-3417/10/23/8655/htm" target="_blank">Tabaković, 2020</a></li>
+    <li><a href="https://news.algaeworld.org/2019/12/microalgae-yields-biofuel-high-value-by-products/" target="_blank">Algae World News, 2019</a></li>
+    <li>Shishehbor & Reza Pouranian, 2019</li>
+    <li>Review of warm mix rubberized asphalt concrete: Towards a sustainable paving technology, 2017</li>
+    <li><a href="https://www.thebalancesmb.com/steps-to-start-a-tire-shredding-business-2878130 " target="_blank">Haque, 2019</a></li>
+    <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0959652620333497" target="_blank">Zahoor, Nizamuddin, Madapusi, & Giustozzi, 2021</a></li>
+    <li><a href="https://news.algaeworld.org/2019/12/microalgae-yields-biofuel-high-value-by-products/" target="_blank">Algae World News. (2019, December 4). Microalgae yields biofuels & high-value by-products.</a></li>
+    <li><a href="https://www.ammann.com/en/plants/asphalt-plants/complementary-products/rss-120-m" target="_blank">Ammann Group. (2021). RSS 120-M.</a></li>
+    <li><a href="https://bcfocus.com/global-ground-granulated-blast-furnace-slag-market-2020-expected-development-share-demand-and-study-of-key-players-research-predictions-2025/" target="_blank">BCFocus. (2020, October 30). Global Ground Granulated Blast-Furnace Slag Market 2020: Expected Development, Share, Demand And Study Of Key Players- Research Predictions 2025.</a></li>
+    <li><a href="https://e-mak.com/en/products/aggregate-plants/megaton" target="_blank">E-MAK. (2020). Megaton Aggregate Factory.</a></li>
+    <li><a href="https://www.thebalancesmb.com/steps-to-start-a-tire-shredding-business-2878130" target="_blank">Haque, T. (2019, October 23). Steps to Starting a Tire-Shredding Business.</a></li>
+    <li><a href="https://www.roadsbridges.com/how-technological-innovations-are-disrupting-asphalt-mixing-plants-demand" target="_blank">Jha, S. K. (2020, February 24). HOW TECHNOLOGICAL INNOVATIONS ARE DISRUPTING THE ASPHALT MIXING PLANTS DEMAND.</a></li>
+    <li><a href="https://www.engineersireland.ie/Engineers-Journal/News/ggbs-improves-rut-resistance-and-water-sensitivity-in-asphalt-mixes" target="_blank">Kavanagh, A., Lohan, G., & Salih, A. (2014, July 17). GGBS improves rut resistance and water sensitivity in asphalt mixes.</a></li>
+    <li><a href="https://www.worldhighways.com/wh6/feature/asphalt-plant-innovations" target="_blank">World Highways. (2019, June 14). Asphalt plant innovations.</a></li>
+    <li>Zahoor, M., Nizamuddin, S., Madapusi, S., & Giustozzi, F. (2021). Sustainable asphalt rejuvenation using waste cooking oil: A comprehensive review. Journal of Cleaner Production Volume 278, NA</li>
+  </ul>
+</br>
+</br>
+</br>
+</br>
+</br>
+</div>
+
+<div id="About" class="tabcontent">
+  <br />
+  <h3 align="center"><i><u><b>About</b></u></i></h3>
+  <br />
+  <ul>
+    <li>Project done for Technological University Dublin, part time course DT032, Earth Science module.</li>
+  </br>
+    <li>Authors:</li>
+      <ul>
+        <li>Patricia O'Neill</li>
+        <li>Natasha Crudden</li>
+        <li>Ciaran Goggin</li>
+        <li>Nenad Vicic</li>
+      </ul>
+    </br>
+    <li>This project is done purely for educational purposes, if there is any information anyone finds misleading, incorrect or offensive or if you feel there are any copyright rights broken please <a href = "mailto: D19124245@mytudublin.ie">email</a> us </li>
+  </ul>
+</div>
+
+
+<!-- Javascript -->
+
+<!-- Top Tab -->
+<script>
+function openTab(evt, tabName) {
+	//Declare all variables
+	var i, tabcontent, tablinks;
+
+	// Get all elements with class tabcontent and hide them
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for ( i = 0; i < tabcontent.length; i++) {
+	tabcontent [i].style.display = "none";
+	}
+
+	//Get all elements with class "tablinks" and remove the class active
+	tablinks = document.getElementsByClassName ("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks [i].className = tablinks[i].className.replace( "active", "");
+	}
+
+	// Show the current tab and add an "active" class to the button that opened the tab
+	document.getElementById(tabName) .style.display = "block";
+	evt.currentTarget.className += " active";
+	}
+
+  // Default tab
+  document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+
+</html>
